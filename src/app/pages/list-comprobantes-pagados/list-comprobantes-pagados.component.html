@@ -1,0 +1,27 @@
+<div>
+    <h1>Listado de los comprobantes pagados</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>codigo</th>
+          <th>subtotal</th>
+          <th>iva</th>
+          <th>total</th>
+          <th>estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cabecera of listadoComprobantesPWS | async">
+          <th>{{ cabecera.codigo }}</th>
+          <td>{{ cabecera.subtotal }}</td>
+          <td>{{ cabecera.iva }}</td>
+          <td>{{ cabecera.total }}</td>
+          <td>{{ cabecera.estado }}</td>
+          <td>
+            <!--<button type="button">Edit</button>
+            <button type="button">Delete</button>-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,27 @@
+
+<div>
+  <h1>Crear tarifas</h1>
+  <table>
+    <thead>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+              <mat-label>descripcion:</mat-label>
+              <input matInput placeholder="Ex. Juan Perez" id="txtDescripcion" [(ngModel)]="tarifa.descripcion">
+          </mat-form-field>
+      </td>
+      <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>precio:</mat-label>
+              <input matInput placeholder="Ex. 0123456789" id="txtPrecio" [(ngModel)]="tarifa.precio">
+          </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <button (click)="guardar()" >Guardar</button>
+        </tr>
+    </thead>
+  </table>
+</div>
+

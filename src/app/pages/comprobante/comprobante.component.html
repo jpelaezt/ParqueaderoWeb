@@ -1,0 +1,69 @@
+<div>
+    <h1>Crear de comprobante</h1>
+    <table>
+      <thead>
+        <tr>
+            
+            
+        <tr>
+            <th>
+                Cliente
+            </th>
+            <th>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Cedula:</mat-label>
+                    <input matInput placeholder="Ex. 0104997044" id="txtusuariocedula" [(ngModel)]="comprobante.cedulaCliente">
+                </mat-form-field>
+            </th>
+            <th>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Nombre:</mat-label>
+                    <input matInput placeholder="Ex. JuanPerez" id="txtusuarionombre" [(ngModel)]="comprobante.nombreCliente">
+                </mat-form-field>
+            </th>
+            <th>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Telefono:</mat-label>
+                    <input matInput placeholder="Ex. 0995759431" id="txtusuariotelefono" [(ngModel)]="comprobante.telefonoCliente">
+                </mat-form-field>
+            </th>
+        </tr>
+        <tr>
+            <th>Vehuculo</th>
+           <th>
+            <mat-form-field class="example-full-width">
+                <mat-label>Placa:</mat-label>
+                <input matInput placeholder="Ex. ABC-1234" id="txtplacavehiculo" [(ngModel)]="comprobante.placaVehiculo">
+            </mat-form-field>
+           </th> 
+           <th>
+            <mat-form-field class="example-full-width">
+                <mat-label>Marca:</mat-label>
+                <input matInput placeholder="Ex. Kia" id="txtmarcavehiculo" [(ngModel)]="comprobante.marcaVehiculo">
+            </mat-form-field>
+           </th>
+           <th>
+            <mat-form-field class="example-full-width">
+                <mat-label>Modelo:</mat-label>
+                <input matInput placeholder="Ex. Celtos" id="txtmodelovehiculo" [(ngModel)]="comprobante.modeloVehiculo">
+            </mat-form-field>
+           </th>
+        </tr>
+        <tr>
+            <th>Tarifa</th>
+            <th></th>
+            <th>
+                <select placeholder="Ex. 1 " id="slccodigotarifa" [(ngModel)]="comprobante.codigoTarifa" > 
+                    <option matInput *ngFor="let tarifa of listadoTarifasWS | async" 
+                    [value]="tarifa.codigo">{{tarifa.descripcion}}
+                    </option>
+                     </select>
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <button (click)="guardar()" >Guardar</button>
+        </tr>
+      </thead>
+    </table>
+  </div>

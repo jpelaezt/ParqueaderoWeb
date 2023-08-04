@@ -1,0 +1,23 @@
+<div>
+    <h1>Listado de vehiculos</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>descripcion</th>
+          <th>precio</th>
+          <th>estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tarifa of listadoVehiculosWS | async">
+          <th>{{ tarifa.placa }}</th>
+          <td>{{ tarifa.marca }}</td>
+          <td>{{ tarifa.modelo }}</td>
+          <td>
+            <!--<button type="button">Edit</button>
+            <button type="button">Delete</button>-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

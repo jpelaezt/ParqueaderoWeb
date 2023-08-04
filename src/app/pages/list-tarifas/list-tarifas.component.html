@@ -1,0 +1,24 @@
+<div>
+    <h1>Listado de tarifas actuales</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>descripcion</th>
+          <th>precio</th>
+          <th>estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tarifa of listadoTarifasWS | async">
+          <th>{{ tarifa.descripcion }}</th>
+          <td>{{ tarifa.precio }}</td>
+          <td>{{ tarifa.estado }}</td>
+          <td>
+            <span  (click)="editar(tarifa)" >eliminar</span>
+            <!--<button type="button">Edit</button>
+            <button type="button">Delete</button>-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

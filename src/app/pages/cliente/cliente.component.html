@@ -1,0 +1,15 @@
+<mat-form-field class="example-full-width">
+    <mat-label>Cedula:</mat-label>
+    <input matInput placeholder="Ex. 0104997044" id="txtCedula" [(ngModel)]="cliente.cedula">
+</mat-form-field>
+<mat-form-field class="example-full-width">
+    <mat-label>Nombres:</mat-label>
+    <input matInput placeholder="Ex. Juan Perez" id="txtNombre" [(ngModel)]="cliente.nombres">
+</mat-form-field>
+<mat-form-field class="example-full-width">
+    <mat-label>Telefono:</mat-label>
+    <input matInput placeholder="Ex. 0995759431" id="txtTelefono" [(ngModel)]="cliente.telefono">
+</mat-form-field>
+<br/>
+<br/>
+<button (click)="guardar()" >Guardar</button>

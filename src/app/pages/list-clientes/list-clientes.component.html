@@ -1,0 +1,25 @@
+<div>
+    <h1>Listado de clientes</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>cedula</th>
+          <th>nombres</th>
+          <th>telefono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of listadoClientesWS | async">
+          <th>{{ cliente.cedula }}</th>
+          <td>{{ cliente.nombres }}</td>
+          <td>{{ cliente.telefono }}</td>
+          <td>
+            <!--
+                <span (click)="editar(cliente)" >Editar</span> | <span  (click)="eliminar(cliente)">Eliminar</span> 
+                <button type="button">Edit</button>
+            <button type="button">Delete</button>-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
